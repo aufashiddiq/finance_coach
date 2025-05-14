@@ -1,0 +1,13 @@
+{
+  "onboarding": {
+    "track_finances": "Track Your Finances",
+    "track_finances_desc": "Easily record and categorize your income and expenses to keep track of where your money goes.",
+    "set_budgets": "Set Budgets",
+    "set_budgets_desc": "Create monthly budgets for different categories and stay on top of your spending habits.",
+    "achieve_goals": "Achieve Your Goals",
+    "achieve_goals_desc": "Set financial goals and track your progress as you work towards achieving them.",
+    "skip": "Skip",
+    "next": "Next",
+    "get_started": "Get Started"
+  }
+}

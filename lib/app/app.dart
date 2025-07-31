@@ -6,7 +6,7 @@ import 'routes.dart';
 import 'theme.dart';
 
 class FinanceCoachApp extends StatelessWidget {
-  const FinanceCoachApp({Key? key}) : super(key: key);
+  const FinanceCoachApp({super.key});
 
   @override
   Widget build(BuildContext buildContext) {

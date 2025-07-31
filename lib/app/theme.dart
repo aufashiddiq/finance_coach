@@ -136,7 +136,6 @@ class AppTheme {
       secondary: accentColor,
       error: errorColor,
       surface: darkCardColor,
-      background: darkBackgroundColor,
     ),
     scaffoldBackgroundColor: darkBackgroundColor,
     cardColor: darkCardColor,

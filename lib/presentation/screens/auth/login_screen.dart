@@ -1,10 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../app/routes.dart';
 import '../../providers/app_state_provider.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -63,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   // App name
                   Text(
-                    'Finance Coach',
+                    'login.title'.tr(),
                     style: Theme.of(context).textTheme.displayLarge,
                     textAlign: TextAlign.center,
                   ),
@@ -71,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   // Tagline
                   Text(
-                    'Your personal guide to financial freedom',
+                    'login.subtitle'.tr(),
                     style: Theme.of(context).textTheme.bodyLarge,
                     textAlign: TextAlign.center,
                   ),
@@ -97,18 +98,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   TextFormField(
                     controller: _emailController,
                     keyboardType: TextInputType.emailAddress,
-                    decoration: const InputDecoration(
-                      labelText: 'Email',
+                    decoration: InputDecoration(
+                      labelText: 'login.email'.tr(),
                       prefixIcon: Icon(Icons.email_outlined),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter your email';
+                        return 'login.enter_email'.tr();
                       }
                       if (!RegExp(
                         r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
                       ).hasMatch(value)) {
-                        return 'Please enter a valid email';
+                        return 'login.enter_valid_email'.tr();
                       }
                       return null;
                     },
@@ -120,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     controller: _passwordController,
                     obscureText: _obscurePassword,
                     decoration: InputDecoration(
-                      labelText: 'Password',
+                      labelText: 'login.password'.tr(),
                       prefixIcon: const Icon(Icons.lock_outline),
                       suffixIcon: IconButton(
                         icon: Icon(
@@ -137,10 +138,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter your password';
+                        return 'login.enter_password'.tr();
                       }
                       if (value.length < 6) {
-                        return 'Password must be at least 6 characters';
+                        return 'login.enter_valid_password'.tr();
                       }
                       return null;
                     },
@@ -166,8 +167,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 color: Colors.white,
                               ),
                             )
-                            : const Text(
-                              'Login',
+                            : Text(
+                              'login.login'.tr(),
                               style: TextStyle(
                                 fontSize: 16.0,
                                 fontWeight: FontWeight.bold,
@@ -180,7 +181,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("Don't have an account?"),
+                      Text("login.dont_have_account".tr()),
                       TextButton(
                         onPressed: () {
                           Navigator.pushReplacementNamed(
@@ -188,7 +189,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             AppRoutes.signup,
                           );
                         },
-                        child: const Text('Sign Up'),
+                        child: Text("login.sign_up".tr()),
                       ),
                     ],
                   ),

@@ -9,5 +9,18 @@
     "skip": "Skip",
     "next": "Next",
     "get_started": "Get Started"
+  }, 
+  "login": {
+    "finance_coach": "Finance Coach",
+    "subtitle": "Your personal guide to financial freedom",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "dont_have_account": "Don't have an account?",
+    "sign_up": "Sign Up",
+    "enter_email": "Please enter your email",
+    "enter_password": "Please enter your password",
+    "enter_valid_email": "Please enter a valid email address",
+    "enter_valid_password": "Password must be at least 6 characters long"
   }
 }

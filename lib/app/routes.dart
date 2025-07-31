@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import '../presentation/screens/auth/login_screen.dart';
-import '../presentation/screens/auth/signup_screen.dart';
 import '../presentation/screens/dashboard/dashboard_screen.dart';
 import '../presentation/screens/budget/budget_screen.dart';
-import '../presentation/screens/goals/goals_screen.dart';
 import '../presentation/screens/onboarding/onboarding_screen.dart';
-import '../presentation/screens/profile/profile_screen.dart';
-import '../presentation/screens/settings/settings_screen.dart';
 
 class AppRoutes {
   static const String onboarding = '/onboarding';

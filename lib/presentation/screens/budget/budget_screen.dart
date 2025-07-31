@@ -5,7 +5,7 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:fl_chart/fl_chart.dart';
 
 class BudgetScreen extends StatefulWidget {
-  const BudgetScreen({Key? key}) : super(key: key);
+  const BudgetScreen({super.key});
 
   @override
   State<BudgetScreen> createState() => _BudgetScreenState();

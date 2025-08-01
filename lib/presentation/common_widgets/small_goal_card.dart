@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class GoalCard extends StatelessWidget {
+class SmallGoalCard extends StatelessWidget {
   final String name;
   final double targetAmount;
   final double currentAmount;
@@ -10,7 +10,7 @@ class GoalCard extends StatelessWidget {
   final IconData icon;
   final VoidCallback? onTap;
 
-  const GoalCard({
+  const SmallGoalCard({
     Key? key,
     required this.name,
     required this.targetAmount,

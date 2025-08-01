@@ -21,9 +21,10 @@ class FinanceCoachApp extends StatelessWidget {
           darkTheme: AppTheme.darkTheme,
           themeMode: appStateProvider.themeMode,
           initialRoute:
-              appStateProvider.isUserLoggedIn
-                  ? AppRoutes.dashboard
-                  : AppRoutes.onboarding,
+              // appStateProvider.isUserLoggedIn
+              // ? AppRoutes.dashboard
+              // : AppRoutes.onboarding,
+              AppRoutes.onboarding,
           onGenerateRoute: AppRouter.onGenerateRoute,
           debugShowCheckedModeBanner: false,
         );

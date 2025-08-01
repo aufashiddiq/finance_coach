@@ -108,23 +108,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   // Next button
                   SizedBox(
                     width: double.infinity,
-                    child: ElevatedButton(
+                    child: AppButton(
                       onPressed: _onNextPage,
-                      style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 16.0),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                      ),
-                      child: Text(
-                        _currentPage == _pages.length - 1
-                            ? 'onboarding.get_started'.tr()
-                            : 'onboarding.next'.tr(),
-                        style: const TextStyle(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      text:
+                          _currentPage == _pages.length - 1
+                              ? 'onboarding.get_started'.tr()
+                              : 'onboarding.next'.tr(),
                     ),
                   ),
                 ],

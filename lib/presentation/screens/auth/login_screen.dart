@@ -1,4 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:finance_coach/presentation/common_widgets/app_button.dart';
+import 'package:finance_coach/presentation/common_widgets/app_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../app/routes.dart';
@@ -64,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   // App name
                   Text(
-                    'login.title'.tr(),
+                    'login.finance_coach'.tr(),
                     style: Theme.of(context).textTheme.displayLarge,
                     textAlign: TextAlign.center,
                   ),
@@ -94,14 +96,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   if (provider.errorMessage != null)
                     const SizedBox(height: 16.0),
 
-                  // Email field
-                  TextFormField(
+                  AppTextField(
                     controller: _emailController,
+                    labelText: 'login.email'.tr(),
                     keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      labelText: 'login.email'.tr(),
-                      prefixIcon: Icon(Icons.email_outlined),
-                    ),
+                    prefixIcon: Icons.email_outlined,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'login.enter_email'.tr();
@@ -116,26 +115,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(height: 16.0),
 
-                  // Password field
-                  TextFormField(
+                  AppTextField(
                     controller: _passwordController,
+                    labelText: 'login.password'.tr(),
                     obscureText: _obscurePassword,
-                    decoration: InputDecoration(
-                      labelText: 'login.password'.tr(),
-                      prefixIcon: const Icon(Icons.lock_outline),
-                      suffixIcon: IconButton(
-                        icon: Icon(
-                          _obscurePassword
-                              ? Icons.visibility_outlined
-                              : Icons.visibility_off_outlined,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            _obscurePassword = !_obscurePassword;
-                          });
-                        },
-                      ),
-                    ),
+                    prefixIcon: Icons.lock_outline,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'login.enter_password'.tr();
@@ -148,32 +132,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(height: 24.0),
 
-                  // Login button
-                  ElevatedButton(
-                    onPressed: provider.isLoading ? null : _login,
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 16.0),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                    ),
-                    child:
-                        provider.isLoading
-                            ? const SizedBox(
-                              height: 24.0,
-                              width: 24.0,
-                              child: CircularProgressIndicator(
-                                strokeWidth: 2.0,
-                                color: Colors.white,
-                              ),
-                            )
-                            : Text(
-                              'login.login'.tr(),
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                  AppButton(
+                    onPressed: _login,
+                    isLoading: provider.isLoading,
+                    text: 'login.login'.tr(),
                   ),
                   const SizedBox(height: 16.0),
 

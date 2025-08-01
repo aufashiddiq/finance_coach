@@ -5,7 +5,7 @@ class EditBudgetDialog extends StatefulWidget {
   final Budget budget;
   final Function(Budget) onBudgetUpdated;
 
-  const EditBudgetDialog({required this.budget, required this.onBudgetUpdated});
+  const EditBudgetDialog({super.key, required this.budget, required this.onBudgetUpdated});
 
   @override
   State<EditBudgetDialog> createState() => EditBudgetDialogState();

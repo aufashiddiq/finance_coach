@@ -3,7 +3,6 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import '../../../app/routes.dart';
-import '../../../core/constants/app_constants.dart';
 import '../../providers/app_state_provider.dart';
 
 class DashboardScreen extends StatefulWidget {

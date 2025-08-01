@@ -6,7 +6,7 @@ class AddContributionDialog extends StatefulWidget {
   final FinancialGoal goal;
   final Function(double) onContributionAdded;
 
-  const AddContributionDialog({
+  const AddContributionDialog({super.key, 
     required this.goal,
     required this.onContributionAdded,
   });

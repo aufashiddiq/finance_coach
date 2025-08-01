@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class BudgetScreen extends StatefulWidget {
-  const BudgetScreen({Key? key}) : super(key: key);
+  const BudgetScreen({super.key});
 
   @override
   State<BudgetScreen> createState() => _BudgetScreenState();

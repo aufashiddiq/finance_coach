@@ -15,7 +15,7 @@ class AppTextField extends StatefulWidget {
   final String? prefixText;
 
   const AppTextField({
-    Key? key,
+    super.key,
     this.labelText,
     this.hintText,
     this.controller,
@@ -28,7 +28,7 @@ class AppTextField extends StatefulWidget {
     this.enabled = true,
     this.maxLines = 1,
     this.prefixText,
-  }) : super(key: key);
+  });
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();

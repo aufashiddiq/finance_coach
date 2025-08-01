@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 class AddGoalDialog extends StatefulWidget {
   final Function(FinancialGoal) onGoalAdded;
 
-  const AddGoalDialog({required this.onGoalAdded});
+  const AddGoalDialog({super.key, required this.onGoalAdded});
 
   @override
   State<AddGoalDialog> createState() => AddGoalDialogState();

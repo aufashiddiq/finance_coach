@@ -8,13 +8,13 @@ class EmptyStateWidget extends StatelessWidget {
   final VoidCallback? onActionPressed;
 
   const EmptyStateWidget({
-    Key? key,
+    super.key,
     required this.icon,
     required this.title,
     required this.message,
     this.actionText,
     this.onActionPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

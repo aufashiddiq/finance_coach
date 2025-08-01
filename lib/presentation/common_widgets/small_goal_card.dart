@@ -11,7 +11,7 @@ class SmallGoalCard extends StatelessWidget {
   final VoidCallback? onTap;
 
   const SmallGoalCard({
-    Key? key,
+    super.key,
     required this.name,
     required this.targetAmount,
     required this.currentAmount,
@@ -19,7 +19,7 @@ class SmallGoalCard extends StatelessWidget {
     required this.color,
     required this.icon,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

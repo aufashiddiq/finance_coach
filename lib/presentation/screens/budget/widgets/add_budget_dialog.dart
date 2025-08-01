@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class AddBudgetDialog extends StatefulWidget {
   final Function(Budget) onBudgetAdded;
 
-  const AddBudgetDialog({required this.onBudgetAdded});
+  const AddBudgetDialog({super.key, required this.onBudgetAdded});
 
   @override
   State<AddBudgetDialog> createState() => AddBudgetDialogState();

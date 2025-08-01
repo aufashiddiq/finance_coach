@@ -10,12 +10,12 @@ class BudgetCard extends StatelessWidget {
   final VoidCallback? onDelete;
 
   const BudgetCard({
-    Key? key,
+    super.key,
     required this.budget,
     this.onTap,
     this.onEdit,
     this.onDelete,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -39,9 +39,9 @@ class LargeGoalCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
       decoration: BoxDecoration(
-        color: chipColor.withOpacity(0.1),
+        color: chipColor.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12.0),
-        border: Border.all(color: chipColor.withOpacity(0.3)),
+        border: Border.all(color: chipColor.withValues(alpha: 0.3)),
       ),
       child: Text(
         label,
@@ -71,7 +71,7 @@ class LargeGoalCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(16.0),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10.0,
             offset: const Offset(0, 4),
           ),
@@ -86,7 +86,7 @@ class LargeGoalCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(12.0),
                 decoration: BoxDecoration(
-                  color: goal.color.withOpacity(0.1),
+                  color: goal.color.withValues(alpha: 0.1),
                   shape: BoxShape.circle,
                 ),
                 child: Icon(goal.icon, color: goal.color, size: 28.0),
@@ -188,7 +188,7 @@ class LargeGoalCard extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [goal.color, goal.color.withOpacity(0.7)],
+                    colors: [goal.color, goal.color.withValues(alpha: 0.7)],
                   ),
                   borderRadius: BorderRadius.circular(6.0),
                 ),

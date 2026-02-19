@@ -140,7 +140,7 @@ class _BudgetScreenState extends State<BudgetScreen> {
               vertical: 8.0,
             ),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(20.0),
             ),
             child: _buildDropdownMonthYear(context),
@@ -175,7 +175,7 @@ class _BudgetScreenState extends State<BudgetScreen> {
             width: double.infinity,
             height: 8.0,
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.3),
+              color: Colors.white.withValues(alpha: 0.3),
               borderRadius: BorderRadius.circular(4.0),
             ),
             child: FractionallySizedBox(

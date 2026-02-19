@@ -104,7 +104,7 @@ class _GoalsScreenState extends State<GoalsScreen> {
               gradient: LinearGradient(
                 colors: [
                   Theme.of(context).primaryColor,
-                  Theme.of(context).primaryColor.withOpacity(0.8),
+                  Theme.of(context).primaryColor.withValues(alpha: 0.8),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -112,7 +112,7 @@ class _GoalsScreenState extends State<GoalsScreen> {
               borderRadius: BorderRadius.circular(16.0),
               boxShadow: [
                 BoxShadow(
-                  color: Theme.of(context).primaryColor.withOpacity(0.3),
+                  color: Theme.of(context).primaryColor.withValues(alpha: 0.3),
                   blurRadius: 10.0,
                   offset: const Offset(0, 4),
                 ),
@@ -157,7 +157,7 @@ class _GoalsScreenState extends State<GoalsScreen> {
                   width: double.infinity,
                   height: 8.0,
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.3),
+                    color: Colors.white.withValues(alpha: 0.3),
                     borderRadius: BorderRadius.circular(4.0),
                   ),
                   child: FractionallySizedBox(

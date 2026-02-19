@@ -62,7 +62,7 @@ class BudgetCard extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(10.0),
                       decoration: BoxDecoration(
-                        color: budget.color.withOpacity(0.1),
+                        color: budget.color.withValues(alpha: 0.1),
                         shape: BoxShape.circle,
                       ),
                       child: Icon(budget.icon, color: budget.color, size: 24.0),

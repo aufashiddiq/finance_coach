@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../presentation/providers/app_state_provider.dart';
+import '../providers/app_state_provider.dart';
 import 'routes.dart';
 import 'theme.dart';
 
@@ -25,7 +25,7 @@ class FinanceCoachApp extends StatelessWidget {
                   ? AppRoutes.dashboard
                   : AppRoutes.onboarding,
 
-          onGenerateRoute: AppRouter.onGenerateRoute,
+          onGenerateRoute: AppRouter.generateRoute,
           debugShowCheckedModeBanner: false,
         );
       },

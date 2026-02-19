@@ -36,6 +36,18 @@ class AppTheme {
     color: textPrimaryColor,
   );
 
+  static const TextStyle titleLarge = TextStyle(
+    fontSize: 18.0,
+    fontWeight: FontWeight.w600,
+    color: textPrimaryColor,
+  );
+
+  static const TextStyle titleMedium = TextStyle(
+    fontSize: 16.0,
+    fontWeight: FontWeight.w500,
+    color: textPrimaryColor,
+  );
+
   static const TextStyle bodyText1 = TextStyle(
     fontSize: 16.0,
     fontWeight: FontWeight.normal,
@@ -66,7 +78,7 @@ class AppTheme {
     scaffoldBackgroundColor: backgroundColor,
     cardColor: cardColor,
     appBarTheme: const AppBarTheme(
-      color: primaryColor,
+      backgroundColor: primaryColor,
       elevation: 0,
       iconTheme: IconThemeData(color: Colors.white),
       titleTextStyle: TextStyle(
@@ -140,7 +152,7 @@ class AppTheme {
     scaffoldBackgroundColor: darkBackgroundColor,
     cardColor: darkCardColor,
     appBarTheme: const AppBarTheme(
-      color: darkBackgroundColor,
+      backgroundColor: darkBackgroundColor,
       elevation: 0,
       iconTheme: IconThemeData(color: darkTextPrimaryColor),
       titleTextStyle: TextStyle(

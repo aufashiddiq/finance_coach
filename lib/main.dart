@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'app/app.dart';
-import 'data/services/auth_service.dart';
-import 'data/services/database_service.dart';
-import 'presentation/providers/app_state_provider.dart';
+import 'services/auth_service.dart';
+import 'services/database_service.dart';
+import 'providers/app_state_provider.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 void main() async {

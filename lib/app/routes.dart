@@ -1,10 +1,10 @@
-import 'package:finance_coach/presentation/screens/auth/signup_screen.dart';
-import 'package:finance_coach/presentation/screens/goals/goals_screen.dart';
+import 'package:finance_coach/screens/auth/signup_screen.dart';
+import 'package:finance_coach/screens/goals/goals_screen.dart';
 import 'package:flutter/material.dart';
-import '../presentation/screens/auth/login_screen.dart';
-import '../presentation/screens/dashboard/dashboard_screen.dart';
-import '../presentation/screens/budget/budget_screen.dart';
-import '../presentation/screens/onboarding/onboarding_screen.dart';
+import '../screens/auth/login_screen.dart';
+import '../screens/dashboard/dashboard_screen.dart';
+import '../screens/budget/budget_screen.dart';
+import '../screens/onboarding/onboarding_screen.dart';
 
 class AppRoutes {
   static const String onboarding = '/onboarding';
@@ -13,12 +13,10 @@ class AppRoutes {
   static const String dashboard = '/dashboard';
   static const String budget = '/budget';
   static const String goals = '/goals';
-  static const String profile = '/profile';
-  static const String settings = '/settings';
 }
 
 class AppRouter {
-  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
+  static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRoutes.onboarding:
         return MaterialPageRoute(builder: (_) => const OnboardingScreen());
@@ -32,10 +30,6 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const BudgetScreen());
       case AppRoutes.goals:
         return MaterialPageRoute(builder: (_) => const GoalsScreen());
-      // case AppRoutes.profile:
-      //   return MaterialPageRoute(builder: (_) => const ProfileScreen());
-      // case AppRoutes.settings:
-      //   return MaterialPageRoute(builder: (_) => const SettingsScreen());
       default:
         return MaterialPageRoute(
           builder:
